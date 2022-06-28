@@ -20,11 +20,16 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
     },
     name: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     visibility: {
-      type:DataTypes.BOOLEAN,
-      defaultValue: true
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
   }, {
     sequelize,

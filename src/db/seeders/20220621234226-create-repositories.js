@@ -8,13 +8,20 @@ module.exports = {
     repositories.push(
       {
         name: 'perritos',
-        visibility: false
+        visibility: false,
+        userId: 1,
+        createdAt: new Date,
+        updatedAt: new Date,
       });
     repositories.push(
       {
-        name: 'gatitos'
+        name: 'gatitos',
+        visibility: true,
+        userId: 1,
+        createdAt: new Date,
+        updatedAt: new Date,
       });
-    await queryInterface.bulkInsert('Repositories', usuarios, {});
+    await queryInterface.bulkInsert('Repositories', repositories, {});
   },
 
   async down (queryInterface, Sequelize) {
